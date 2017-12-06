@@ -1,0 +1,55 @@
+* {
+  outline: dotted 1px orange;
+}
+
+header {
+
+  background: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+main {
+  float: left;
+  width: 80%;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16;
+  font-family: sans-serif;
+}
+
+.leftColumn {
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-color: #999;
+}
+
+
+h1 {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+img {
+  margin: 3px 4px 3px 4px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  color: #fff
+}
+
+.foot {
+  text-align:center;
+}
