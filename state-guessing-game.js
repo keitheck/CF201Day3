@@ -2,31 +2,18 @@
 
 
 var states = ['oregon', 'washington', 'maine', 'alaska', 'california'];
+var i;
+var userGuess = prompt('Guess State.');
 
-var userGuess = prompt('Guess the password to enter. \n You have 6 tries to guess correctly. \n Hint: The password is a state.');
-console.log('User Guess:', userGuess);
+for (i = 0; i < states.length; i++) {
 
-var flag;
-
-var guessNumber = 1;
-
-for (var i = 0; i < states.length; i++) {
-  console.log('each item at each iteration', states[i]);
-
-  if (userGuess === states[i]) {
-    alert('Click Continue to Enter');
-    flag = true;
+  if (userGuess === states[0] || userGuess === states[1] || userGuess === states[2] || userGuess === states[3] || userGuess === states[4]) {
+    alert('correct');
     break;
   }
 
-  if (guessNumber === 6) {
-    alert('Too many guesses');
-    break;
-  }
-
-  if (!flag) {
-    guessNumber++;
-    prompt('Incorrect.\nYou have ' + (6 - guessNumber) + 'tries remaining.\nGuess another State.');
-    console.log('User Guess:', userGuess);
+  if (userGuess !== states[i]) {
+    alert('incorrect');
+    userGuess = prompt('Guess State.');
   }
 }

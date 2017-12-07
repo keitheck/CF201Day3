@@ -80,3 +80,7 @@ li {
 .date {
   font-weight: bold;
 }
+
+body {
+  color: red;
+}
