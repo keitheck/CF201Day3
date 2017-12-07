@@ -4,6 +4,8 @@
 var states = ['oregon', 'washington', 'maine', 'alaska', 'california'];
 var i;
 var userGuess = prompt('Guess State.');
+console.log('Guessed State:', userGuess);
+var guesses = 1;
 
 for (i = 0; i < states.length; i++) {
 
@@ -12,8 +14,16 @@ for (i = 0; i < states.length; i++) {
     break;
   }
 
+  if (guesses < 5) {
+    console.log('#guesses:', guesses);
+    alert('too many guesses');
+    break;
+  }
+
   if (userGuess !== states[i]) {
     alert('incorrect');
     userGuess = prompt('Guess State.');
+    console.log('Guessed State:', userGuess);
   }
+  guesses++;
 }
