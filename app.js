@@ -1,5 +1,7 @@
 'use strict';
 
+function aboutKeith() {
+
 var counter = 0;
 
 
@@ -86,3 +88,7 @@ if (counter <= 3) {
 } else if (counter === 5) {
   alert('U got mad skills and got ' + counter + ' questions correct!  The next page has a bit more info about Keith and his pursuit of a new career in programming.');
 }
+
+}
+
+aboutKeith ();
