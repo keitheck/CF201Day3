@@ -8,7 +8,7 @@ console.log('generated number:', randomNumber);
 var guessedNumber = parseInt(prompt('I am thinking of a number between 0 and 10.  Can you guess it?'));
 console.log('number guessed:', guessedNumber);
 
-while (guessedNumber !== randomNumber) {
+while (guessedNumber !== randomNumber && counter <= 3) {
 
   if(guessedNumber < randomNumber) {
     guessedNumber = parseInt(prompt('Too low.\n Please guess another number between 0 and 10.'));
@@ -24,6 +24,11 @@ while (guessedNumber !== randomNumber) {
   }
 }
 
-alert('It took you ' + counter + ' tries to guess the number.');
+if (counter >= 4) {
+  alert('too many guesses');
+} else {
+  alert('It took you ' + counter + ' tries to guess the number.');
+}
+
 
 console.log('Number of Guesses', counter);
