@@ -1,5 +1,7 @@
 'use strict';
 
+function guessGame () {
+
 var counter = 1;
 
 var randomNumber = Math.floor(Math.random() * 10);
@@ -32,3 +34,7 @@ if (counter >= 4) {
 
 
 console.log('Number of Guesses', counter);
+
+}
+
+guessGame ();

@@ -1,5 +1,6 @@
 'use strict';
 
+function stateGame () {
 
 var states = ['oregon', 'washington', 'maine', 'alaska', 'california'];
 var guessesRemaining = 6;
@@ -28,3 +29,7 @@ while(guessesRemaining > 0) {
 
   }
 }
+
+}
+
+stateGame();
