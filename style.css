@@ -11,7 +11,7 @@ header {
 
 main {
   float: left;
-  width: 80%;
+  width: 75%;
   text-align: center;
   font-family: sans-serif;
   font-size: 16;
@@ -20,9 +20,9 @@ main {
 
 .leftColumn {
   float: left;
-  width: 20%;
-  height: 100%;
-  background-color: #999;
+  width: 25%;
+  text-align: center;
+
 }
 
 
@@ -52,4 +52,22 @@ footer {
 
 .foot {
   text-align:center;
+}
+
+.headlines {
+  font-family: sans-serif;
+  font-size: 14;
+  font-weight: bold;
+  margin: 10px;
+
+}
+
+li {
+  margin: 6px 10px 6px 0px ;
+  text-align: left;
+}
+
+.topTen {
+  background-color: #999;
+  padding: 10px 10px 50px 10px;
 }
