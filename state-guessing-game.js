@@ -2,24 +2,29 @@
 
 
 var states = ['oregon', 'washington', 'maine', 'alaska', 'california'];
-var i;
-var userGuess = prompt('Guess State.');
-console.log('Guessed State:', userGuess);
-var guesses = 1;
+var guessesRemaining = 6;
 
-for (i = 0; i < states.length; i++) {
+while(guessesRemaining > 0) {
+  var userGuess = prompt('Guess State.');
+  console.log('userGuess', userGuess);
+  guessesRemaining--;
+  console.log('guessesRemaining', guessesRemaining);
 
-  if (userGuess === states[0] || userGuess === states[1] || userGuess === states[2] || userGuess === states[3] || userGuess === states[4]) {
-    alert('correct');
-    break;
-  } else if (guesses < 6) {
-    console.log('#guesses:', guesses);
-    alert('too many guesses');
-    break;
-  } else if (userGuess !== states[i]) {
-    alert('incorrect');
-    userGuess = prompt('Guess State.');
-    console.log('Guessed State:', userGuess);
-    guesses++;
+  for (var i = 0; i < states.length; i++) {
+    if (userGuess === states[i]) {
+    // if (userGuess === states[0] || userGuess === states[1] || userGuess === states[2] || userGuess === states[3] || userGuess === states[4]) {
+      guessesRemaining = -1;
+      alert('correct');
+      break;
+    }
+  }
+
+  if (guessesRemaining > 0) {
+    alert('incorrect. you have ' + guessesRemaining + ' tries left' );
+  }
+
+  if (guessesRemaining === 0) {
+    alert('out of tries');
+
   }
 }
