@@ -12,18 +12,14 @@ for (i = 0; i < states.length; i++) {
   if (userGuess === states[0] || userGuess === states[1] || userGuess === states[2] || userGuess === states[3] || userGuess === states[4]) {
     alert('correct');
     break;
-  }
-
-  if (guesses < 5) {
+  } else if (guesses < 5) {
     console.log('#guesses:', guesses);
     alert('too many guesses');
     break;
-  }
-
-  if (userGuess !== states[i]) {
+  } else if (userGuess !== states[i]) {
     alert('incorrect');
     userGuess = prompt('Guess State.');
     console.log('Guessed State:', userGuess);
+    guesses++;
   }
-  guesses++;
 }
